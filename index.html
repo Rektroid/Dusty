@@ -423,15 +423,17 @@ How to Buy
 					</div>
 				</div>
 			</section>
-			<section class="page__profile profile-editor">
-  <div class="profile-editor__container">
-    <h2>Create Your Profile Picture</h2>
-    <input type="file" id="upload" accept="image/*">
-    <div id="editor" class="editor-canvas">
-      <img id="uploaded-image" />
-      <img id="sticker" src="img/dust.png" alt="Sticker" />
-    </div>
-    <button id="download">Download Image</button>
+			<section class="profile-editor__container">
+  <h2>Create Your Profile Picture</h2>
+  
+  <!-- Custom-styled upload button -->
+  <label for="upload" class="custom-upload">Upload Image</label>
+  <input type="file" id="upload" accept="image/*" style="display: none;" />
+  
+  <!-- Canvas area -->
+  <div class="editor-canvas" id="canvas">
+    <img id="uploadedImage" style="display: none;" />
+    <img id="sticker" src="sticker.png" />
   </div>
 </section>
 			<section class="page__join join">
