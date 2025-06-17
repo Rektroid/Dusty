@@ -5,6 +5,10 @@ window.onload = function () {
   const uploadInput = document.getElementById('upload');
   const downloadBtn = document.getElementById('downloadBtn');
 
+  // Ensure the canvas has defined size (in case it's not defined in CSS)
+  canvas.setWidth(500);  // Set width of canvas
+  canvas.setHeight(500); // Set height of canvas
+
   // Upload user image
   uploadInput.addEventListener('change', function (e) {
     console.log("📁 File selected:", e.target.files[0]);
@@ -21,7 +25,7 @@ window.onload = function () {
         // Create a fabric image from the uploaded file
         const fabricImage = new fabric.Image(img);
 
-        // Set the scale of the image to fit the canvas
+        // Scale the image to fit the canvas
         const scale = Math.min(canvas.width / img.width, canvas.height / img.height);
         fabricImage.set({
           scaleX: scale,
@@ -30,7 +34,7 @@ window.onload = function () {
           top: (canvas.height - img.height * scale) / 2,  // Center the image vertically
         });
 
-        // Set the image as the background of the canvas
+        // Add the image to the canvas and render
         canvas.setBackgroundImage(fabricImage, canvas.renderAll.bind(canvas));
         canvas.renderAll();  // Render the canvas to update the view
         console.log("✅ User image added to canvas");
