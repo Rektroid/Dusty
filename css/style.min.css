@@ -37,20 +37,48 @@
   width: 100%; /* Ensures the container takes the full width of the parent */
 }
 
+/* Base styles for the buttons */
 .custom-button {
-  background-color: #59c5b1;
-  border: none;
   padding: 10px 20px;
-  color: white;
-  font-size: 1rem;
-  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: #00b894;  /* Default color */
+  color: black;
+  font-weight: bold;
+  text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.custom-button:hover {
-  background-color: #3d9e88; /* Darker shade on hover */
+/* Add background images for buttons */
+.upload-btn {
+  background-image: url('img/hero/upload-icon.svg'); /* Replace with your upload image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 40px; /* Adjust padding to fit the icon */
 }
+
+.download-btn {
+  background-image: url('img/hero/buy-now.svg'); /* Replace with your download image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 40px; /* Adjust padding to fit the icon */
+}
+
+/* Hover effects to change button style */
+.upload-btn:hover, .download-btn:hover {
+  background-color: white;
+  background-image: url('img/hero/upload-icon-hover.svg'); /* Replace with your hover image for upload */
+  border-color: #00b894; /* Border color on hover */
+}
+
+.download-btn:hover {
+  background-image: url('img/hero/buy-now-h.svg'); /* Replace with your hover image for download */
+}
+
 
 
 .editor-section {
