@@ -423,19 +423,6 @@ How to Buy
 					</div>
 				</div>
 			</section>
-			<section class="profile-editor__container">
-  <h2>Create Your Profile Picture</h2>
-  
-  <!-- Custom-styled upload button -->
-  <label for="upload" class="custom-upload">Upload Image</label>
-  <input type="file" id="upload" accept="image/*" style="display: none;" />
-  
-  <!-- Canvas area -->
-  <div class="editor-canvas" id="canvas">
-    <img id="uploadedImage" style="display: none;" />
-    <img id="sticker" src="sticker.png" />
-  </div>
-</section>
 			<section class="page__join join">
 				<div class="join__parallax-box join-parallax-box">
 					<div class="join-parallax-box__item join-parallax-box__item--1">
@@ -524,6 +511,15 @@ How to Buy
 					</div>
 				</div>
 			</section>
+			<section class="editor-section">
+  <h2>Create Your Profile Picture</h2>
+  
+  <div class="editor-container">
+    <input type="file" id="upload" accept="image/*" />
+    <canvas id="editorCanvas" width="500" height="500"></canvas>
+    <button id="downloadBtn">Download Image</button>
+  </div>
+</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -536,26 +532,8 @@ How to Buy
 		</footer>
 
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
 	<script src="js/app.min.js?_v=20250203104322"></script>
-	<script src="js/profile-editor.js"></script>
-	<script>
-  const uploadInput = document.getElementById("upload");
-  const uploadedImage = document.getElementById("uploadedImage");
-
-  uploadInput.addEventListener("change", (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      uploadedImage.src = event.target.result;
-      uploadedImage.style.display = "block";
-    };
-    reader.readAsDataURL(file);
-  });
-</script>
-
-
 		
 </body>
 
