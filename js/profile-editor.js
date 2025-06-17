@@ -13,7 +13,7 @@ window.onload = function () {
     reader.onload = function (event) {
       console.log("📷 Image read as DataURL");
 
-      fabric.Image.fromURL(event.target.result, function (img) {
+      fabric.loadSVGFromURL('./img/menu-open.svg', function (objects, options) {
         console.log("✅ Fabric image loaded");
 
         const canvasWidth = canvas.getWidth();
