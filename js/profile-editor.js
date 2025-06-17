@@ -5,37 +5,19 @@ window.onload = function () {
   const uploadInput = document.getElementById('upload');
   const downloadBtn = document.getElementById('downloadBtn');
 
-  // Load SVG sticker once and store it
-  let sticker = null;
-  fabric.loadSVGFromURL('img/menu-open.svg', function (objects, options) {
-    sticker = fabric.util.groupSVGElements(objects, options);
-    sticker.set({
-      left: 100,
-      top: 100,
-      scaleX: 0.5,
-      scaleY: 0.5,
-      hasControls: true,
-      cornerStyle: 'circle',
-      cornerColor: 'blue',
-      transparentCorners: false,
-    });
-    canvas.add(sticker);
-    canvas.renderAll();
-    console.log("✅ Sticker added to canvas");
-  }, { crossOrigin: 'anonymous' });
-
-  // Handle image upload
+  // Upload user image
   uploadInput.addEventListener('change', function (e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    console.log("📁 File selected:", file);
+    console.log("📁 File selected:", e.target.files[0]);
     const reader = new FileReader();
 
     reader.onload = function (event) {
       console.log("📷 Image read as DataURL");
 
-      fabric.Image.fromURL(event.target.result, function (img) {
+      // Create an image object from the uploaded file
+      const imageUrl = event.target.result;
+      fabric.Image.fromURL(imageUrl, function (img) {
+        console.log("✅ Image loaded onto the canvas");
+
         const canvasWidth = canvas.getWidth();
         const canvasHeight = canvas.getHeight();
         const scale = Math.min(canvasWidth / img.width, canvasHeight / img.height);
@@ -43,20 +25,39 @@ window.onload = function () {
         img.set({
           scaleX: scale,
           scaleY: scale,
-          left: 0,
-          top: 0,
-          selectable: false,
+          left: (canvasWidth - img.width * scale) / 2,  // Center image horizontally
+          top: (canvasHeight - img.height * scale) / 2,  // Center image vertically
+          selectable: false
         });
 
+        // Add the image to the canvas
         canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas));
         canvas.renderAll();
-      }, { crossOrigin: 'anonymous' });
+      });
     };
 
-    reader.readAsDataURL(file);
+    if (e.target.files[0]) {
+      reader.readAsDataURL(e.target.files[0]);
+    } else {
+      console.error("⛔️ No file selected");
+    }
   });
 
-  // Download the canvas image
+  // Load SVG sticker and add it to canvas
+  fabric.Image.fromURL('img/menu-open.svg', function (stickerImg) {
+    stickerImg.scale(0.5);
+    stickerImg.set({
+      left: 100,
+      top: 100,
+      cornerStyle: 'circle',
+      hasRotatingPoint: true
+    });
+    canvas.add(stickerImg);
+    canvas.setActiveObject(stickerImg);
+    console.log("✅ Sticker added to canvas");
+  });
+
+  // Download image
   downloadBtn.addEventListener('click', () => {
     const link = document.createElement('a');
     link.download = 'profile-picture.png';
