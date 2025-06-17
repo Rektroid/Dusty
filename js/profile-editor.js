@@ -41,13 +41,18 @@ window.onload = function () {
   });
 
   // Load SVG sticker
-  fabric.loadSVGFromURL('img/menu-open.svg', function (objects, options) {
-    console.log("🖼 Sticker load callback fired");
-
-    if (!objects || objects.length === 0) {
-      console.error("⛔️ Sticker failed to load or is empty");
-      return;
-    }
+  fabric.Image.fromURL('img/menu-open.svg', function(stickerImg) {
+  stickerImg.scale(0.5);
+  stickerImg.set({
+    left: 100,
+    top: 100,
+    cornerStyle: 'circle',
+    hasRotatingPoint: true
+  });
+  canvas.add(stickerImg);
+  canvas.setActiveObject(stickerImg);
+  console.log("Sticker added to canvas");
+});
 
     const sticker = fabric.util.groupSVGElements(objects, options);
     sticker.set({
