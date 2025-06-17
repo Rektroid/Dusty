@@ -62,36 +62,35 @@ window.onload = function () {
     console.log("✅ Sticker added to canvas");
   });
 
-  // Download image with high resolution
+  // Download image with better quality without capturing sticker
   downloadBtn.addEventListener('click', () => {
-    // Get the current canvas size
-    const width = canvas.width;
-    const height = canvas.height;
+    // Save current background image (user's uploaded image)
+    const backgroundImage = canvas.backgroundImage;
+    
+    // Temporarily remove the sticker for export
+    const sticker = canvas.getActiveObject();
+    if (sticker) {
+      canvas.remove(sticker);
+    }
 
-    // Increase the resolution by a factor (e.g., 2x)
-    const scaleFactor = 2;  // Change this value for higher/lower resolution
+    // Increase the resolution without resizing the canvas (multiplier for better quality)
+    const dataUrl = canvas.toDataURL({
+      format: 'png',
+      quality: 1, // Maximum quality
+      multiplier: 2 // Increase resolution by multiplier (adjust as necessary)
+    });
 
-    // Create a new canvas for the high-res image
-    const highResCanvas = document.createElement('canvas');
-    const highResCtx = highResCanvas.getContext('2d');
+    // Restore the sticker to canvas after downloading
+    if (sticker) {
+      canvas.add(sticker);
+      canvas.setActiveObject(sticker);
+    }
 
-    // Set the new canvas size based on the scale factor
-    highResCanvas.width = width * scaleFactor;
-    highResCanvas.height = height * scaleFactor;
-
-    // Scale the drawing context to match the high resolution
-    highResCtx.scale(scaleFactor, scaleFactor);
-
-    // Render the content of the original canvas to the high-resolution canvas
-    highResCtx.drawImage(canvas.lowerCanvasEl, 0, 0);
-
-    // Convert the high-resolution canvas to a downloadable image
-    const imageURL = highResCanvas.toDataURL('image/png');
-
-    // Create a download link and simulate a click to download the high-res image
+    // Create a download link
     const link = document.createElement('a');
     link.download = 'profile-picture.png'; // Set the file name
-    link.href = imageURL;
-    link.click();
+    link.href = dataUrl;
+    link.click(); // Simulate the download
+    console.log("✅ Image download initiated");
   });
 };
