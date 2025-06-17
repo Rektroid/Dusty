@@ -18,16 +18,21 @@ window.onload = function () {
       img.src = imageUrl;
 
       img.onload = function() {
+        // Create a fabric image from the uploaded file
         const fabricImage = new fabric.Image(img);
+
+        // Set the scale of the image to fit the canvas
         const scale = Math.min(canvas.width / img.width, canvas.height / img.height);
         fabricImage.set({
           scaleX: scale,
           scaleY: scale,
-          left: (canvas.width - img.width * scale) / 2,
-          top: (canvas.height - img.height * scale) / 2,
+          left: (canvas.width - img.width * scale) / 2,  // Center the image horizontally
+          top: (canvas.height - img.height * scale) / 2,  // Center the image vertically
         });
+
+        // Set the image as the background of the canvas
         canvas.setBackgroundImage(fabricImage, canvas.renderAll.bind(canvas));
-        canvas.renderAll();
+        canvas.renderAll();  // Render the canvas to update the view
         console.log("✅ User image added to canvas");
       };
     };
