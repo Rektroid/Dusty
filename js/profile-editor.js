@@ -44,16 +44,23 @@ window.onload = function () {
   });
 
   // Load SVG sticker and add it to canvas
-  fabric.Image.fromURL('img/menu-open.svg', function (stickerImg) {
-    stickerImg.scale(0.5);
-    stickerImg.set({
+  fabric.loadSVGFromURL('img/menu-open.svg', function (objects, options) {
+    console.log("✅ Sticker loaded");
+
+    // Group the SVG objects and set properties
+    const sticker = fabric.util.groupSVGElements(objects, options);
+    sticker.set({
       left: 100,
       top: 100,
+      scaleX: 0.5,
+      scaleY: 0.5,
       cornerStyle: 'circle',
       hasRotatingPoint: true
     });
-    canvas.add(stickerImg);
-    canvas.setActiveObject(stickerImg);
+
+    // Add the sticker to the canvas
+    canvas.add(sticker);
+    canvas.setActiveObject(sticker);
     console.log("✅ Sticker added to canvas");
   });
 
