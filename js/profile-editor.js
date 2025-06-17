@@ -50,7 +50,7 @@ window.onload = function () {
 
   // Load sticker (SVG) and add to canvas
   fabric.Image.fromURL('img/dust.png', function(stickerImg) {
-    stickerImg.scale(0.5);
+    stickerImg.scale(0.05);
     stickerImg.set({
       left: 100,
       top: 100,
