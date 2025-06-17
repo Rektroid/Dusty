@@ -37,6 +37,22 @@
   width: 100%; /* Ensures the container takes the full width of the parent */
 }
 
+.custom-button {
+  background-color: #59c5b1;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #3d9e88; /* Darker shade on hover */
+}
+
+
 .editor-section {
   display: flex;
   flex-direction: column;
