@@ -52,7 +52,7 @@ window.onload = function () {
   canvas.add(stickerImg);
   canvas.setActiveObject(stickerImg);
   console.log("Sticker added to canvas");
-};
+});
 
     const sticker = fabric.util.groupSVGElements(objects, options);
     sticker.set({
