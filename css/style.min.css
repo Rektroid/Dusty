@@ -31,10 +31,9 @@
   width: 100%;
 }
 
-canvas {
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  background: #fff;
+#editorCanvas {
+  width: 500px;
+  height: 500px;
 }
 
 
