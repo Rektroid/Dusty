@@ -37,6 +37,26 @@
           }, t);
       }
     };
+  uploadInput.addEventListener('change', function (e) {
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    fabric.Image.fromURL(event.target.result, function (img) {
+      // Scale image to fit canvas
+      const scaleX = canvas.width / img.width;
+      const scaleY = canvas.height / img.height;
+      const scale = Math.min(scaleX, scaleY);
+
+      img.set({
+        scaleX: scale,
+        scaleY: scale,
+        selectable: false
+      });
+
+      canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas));
+    });
+  };
+  reader.readAsDataURL(e.target.files[0]);
+});
   function c() {
     s(), document.documentElement.classList.remove("menu-open");
   }
