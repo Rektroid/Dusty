@@ -14,12 +14,17 @@
 }
 .profile-editor__container {
   margin: 60px auto;
+  padding: 40px 20px;
   text-align: center;
-  padding: 20px;
-  border-radius: 20px;
   background: #111;
-  max-width: 400px;
   color: white;
+  border-radius: 20px;
+  max-width: 400px;
+}
+
+.profile-editor__container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .editor-canvas {
@@ -46,6 +51,18 @@
   width: 80px;
   transform-origin: center;
 }
+
+.custom-upload {
+  display: inline-block;
+  background-color: #59c5b1;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 
 
 * {
