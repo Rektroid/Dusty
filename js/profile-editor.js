@@ -62,29 +62,14 @@ window.onload = function () {
     console.log("✅ Sticker added to canvas");
   });
 
-  // Download image with better quality without capturing sticker
+  // Download image with better quality including the sticker
   downloadBtn.addEventListener('click', () => {
-    // Save current background image (user's uploaded image)
-    const backgroundImage = canvas.backgroundImage;
-    
-    // Temporarily remove the sticker for export
-    const sticker = canvas.getActiveObject();
-    if (sticker) {
-      canvas.remove(sticker);
-    }
-
     // Increase the resolution without resizing the canvas (multiplier for better quality)
     const dataUrl = canvas.toDataURL({
       format: 'png',
       quality: 1, // Maximum quality
       multiplier: 2 // Increase resolution by multiplier (adjust as necessary)
     });
-
-    // Restore the sticker to canvas after downloading
-    if (sticker) {
-      canvas.add(sticker);
-      canvas.setActiveObject(sticker);
-    }
 
     // Create a download link
     const link = document.createElement('a');
