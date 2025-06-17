@@ -25,6 +25,16 @@
   margin-bottom: 50px;
   align-items: center; /* Centers horizontally */
   justify-content: center;/* Add this line */
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  justify-content: center; /* Center them vertically */
+  align-items: center; /* Center them horizontally */
+  gap: 15px;  /* Adds space between the buttons */
+  width: 100%; /* Ensures the container takes the full width of the parent */
 }
 
 .editor-section {
