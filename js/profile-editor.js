@@ -13,27 +13,23 @@ window.onload = function () {
     reader.onload = function (event) {
       console.log("📷 Image read as DataURL");
 
-      // Create an image object from the uploaded file
       const imageUrl = event.target.result;
-      fabric.Image.fromURL(imageUrl, function (img) {
-        console.log("✅ Image loaded onto the canvas");
+      const img = new Image();
+      img.src = imageUrl;
 
-        const canvasWidth = canvas.getWidth();
-        const canvasHeight = canvas.getHeight();
-        const scale = Math.min(canvasWidth / img.width, canvasHeight / img.height);
-
-        img.set({
+      img.onload = function() {
+        const fabricImage = new fabric.Image(img);
+        const scale = Math.min(canvas.width / img.width, canvas.height / img.height);
+        fabricImage.set({
           scaleX: scale,
           scaleY: scale,
-          left: (canvasWidth - img.width * scale) / 2,  // Center image horizontally
-          top: (canvasHeight - img.height * scale) / 2,  // Center image vertically
-          selectable: false
+          left: (canvas.width - img.width * scale) / 2,
+          top: (canvas.height - img.height * scale) / 2,
         });
-
-        // Add the image to the canvas
-        canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas));
+        canvas.setBackgroundImage(fabricImage, canvas.renderAll.bind(canvas));
         canvas.renderAll();
-      });
+        console.log("✅ User image added to canvas");
+      };
     };
 
     if (e.target.files[0]) {
@@ -43,24 +39,17 @@ window.onload = function () {
     }
   });
 
-  // Load SVG sticker and add it to canvas
-  fabric.loadSVGFromURL('img/menu-open.svg', function (objects, options) {
-    console.log("✅ Sticker loaded");
-
-    // Group the SVG objects and set properties
-    const sticker = fabric.util.groupSVGElements(objects, options);
-    sticker.set({
+  // Load sticker (SVG) and add to canvas
+  fabric.Image.fromURL('img/menu-open.svg', function(stickerImg) {
+    stickerImg.scale(0.5);
+    stickerImg.set({
       left: 100,
       top: 100,
-      scaleX: 0.5,
-      scaleY: 0.5,
       cornerStyle: 'circle',
       hasRotatingPoint: true
     });
-
-    // Add the sticker to the canvas
-    canvas.add(sticker);
-    canvas.setActiveObject(sticker);
+    canvas.add(stickerImg);
+    canvas.setActiveObject(stickerImg);
     console.log("✅ Sticker added to canvas");
   });
 
