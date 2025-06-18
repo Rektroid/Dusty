@@ -96,12 +96,18 @@
 
 
 .editor-section {
+  background-image: url("img/bgtry1.png");
+  background-size: cover;              /* Ensure it covers the section */
+  background-position: center;         /* Center the image */
+  background-repeat: no-repeat;        /* Prevent tiling */
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-  padding-bottom: 50px; /* Add space below */
+  padding-bottom: 50px;                /* Space below the section */
+  padding-top: 50px;                   /* Optional: space above */
 }
+
 
 
 #editorCanvas {
