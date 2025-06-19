@@ -122,19 +122,20 @@
 
 .section-separator {
   position: relative;
-  height: 80px; /* Controls how much overlap you want */
-  overflow: hidden;
-  z-index: 5;
+  height: 80px;
+  z-index: 10;
 }
 
 .section-separator img {
   position: absolute;
-  bottom: 0;
+  top: -100%;
   left: 0;
   width: 100%;
   height: auto;
+  max-height: 400px;
+  transform: translateY(-5px); /* small overlap to cover border */
+  z-index: 10;
   pointer-events: none;
-  z-index: 5;
 }
 
 
