@@ -612,7 +612,7 @@ h6 {
 @media (max-width: 768px) {
   .dark__text {
     font-size: 3px; /* Smaller font */
-    background-size: 50%; /* Ensure image scales with text */
+    background-size: 70%; /* Ensure image scales with text */
     background-repeat: no-repeat;
     background-position: center;
     line-height: 1.4;
@@ -681,6 +681,7 @@ h6 {
 }
 .dark-parallax-box__item--6 {
   z-index: 6;
+  overflow: hidden;
 }
 .born {
   position: relative;
