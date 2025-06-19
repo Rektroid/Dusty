@@ -133,7 +133,7 @@
   width: 100%;
   height: auto;
   max-height: 400px;
-  transform: translateY(-5px); /* small overlap to cover border */
+  transform: translateY(5px); /* small overlap to cover border */
   z-index: 10;
   pointer-events: none;
 }
