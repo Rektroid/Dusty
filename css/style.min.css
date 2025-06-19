@@ -613,7 +613,7 @@ h6 {
  .dark__text {
   font-family: "Berlin";
   font-weight: 700;
-  font-size: 4vw; /* Responsive font */
+  font-size: 1vw; /* Responsive font */
   line-height: 1.3;
   color: #050202;
   word-wrap: break-word;
@@ -623,7 +623,7 @@ h6 {
     .dark-parallax-box__item--6 {
   width: 90vw;
   margin: 0 auto;
-  padding: 6vw;
+  padding: 1vw;
   box-sizing: border-box;
 }
 }
