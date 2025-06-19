@@ -141,8 +141,8 @@
   left: 0;
   width: 100%;
   height: auto;
-  max-height: 500px;
-  transform: translateY(25px); /* small overlap to cover border */
+  max-height: 650px;
+  transform: translateY(15px); /* small overlap to cover border */
   z-index: 10;
   pointer-events: none;
 }
