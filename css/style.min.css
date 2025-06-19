@@ -120,14 +120,15 @@
 
 
 .section-separator {
-  background: url('../img/born/Clouds.png') center center no-repeat;
-  background-size: cover; /* Fill the container while maintaining aspect ratio */
-  background-repeat: no-repeat;
-  background-position: center;
   width: 100%;
-  height: 15vw;        /* Responsive height */
-  min-height: 80px;    /* Ensures it’s visible on mobile */
-  max-height: 150px;   /* Keeps it from growing too much on large screens */
+  height: 15vw;        /* responsive height based on viewport width */
+  min-height: 80px;    /* don't get too short on mobile */
+  max-height: 150px;   /* don't get huge on desktop */
+  
+  background-image: url('../img/born/Clouds.png');
+  background-size: cover;         /* fill the whole div */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
