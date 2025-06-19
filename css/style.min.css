@@ -27,7 +27,7 @@
   position: absolute;
   top: 25%; /* Adjust for vertical placement */
   left: 50%;
-  transform: translateX(-50%) scale(0.8) translateY(-40px);
+  transform: translateX(-50%) scale(0.8) translateY(-100px);
   z-index: 11;
   text-align: center;
   }
@@ -628,7 +628,7 @@ h6 {
 
   .dark__text {
     font-size: 12px;
-    transform: scale(0.6) translateY(30px);
+    transform: scale(0.6) translateY(70px) translateX(50px);
   }
   .dark__title{
     font-size: 12px;
