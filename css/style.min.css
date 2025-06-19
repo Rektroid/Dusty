@@ -27,7 +27,7 @@
   position: absolute;
   top: 25%; /* Adjust for vertical placement */
   left: 50%;
-  transform: translateX(-50%) scale(0.8) transformY(30px);
+  transform: translateX(-50%) scale(0.8) transformY(-60px);
   z-index: 11;
   text-align: center;
   }
@@ -632,7 +632,7 @@ h6 {
   }
   .dark__title{
     font-size: 12px;
-    transform: scale(0.6);
+    transform: scale(0.6) translateX(60px) translateY(100px);
   }
 }
 
