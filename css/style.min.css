@@ -628,7 +628,7 @@ h6 {
 
   .dark__text {
     font-size: 12px;
-    transform: scale(0.6) translateY(70px) translateX(50px);
+    transform: scale(0.6) translateY(100px) translateX(100px);
   }
   .dark__title{
     font-size: 12px;
