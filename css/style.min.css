@@ -17,8 +17,7 @@
   position: absolute;
   top: 20%; /* Adjust for vertical placement */
   left: 50%;
-  transform: translateX(-50%);
-  transform: translateY(10px);
+  transform: translateX(0px);
   z-index: 11;
   text-align: center;
 }
