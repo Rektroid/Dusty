@@ -617,7 +617,7 @@ h6 {
 
   .dark__text {
     font-size: 12px;
-    ransform: scale(0.7);
+    transform: scale(0.5);
   }
 }
 
