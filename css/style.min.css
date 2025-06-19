@@ -618,7 +618,7 @@ h6 {
     line-height: 1.4;
     padding: 10px;
     max-width: 90%; /* Prevents stretching too far */
-    box-sizing: border-box; /* Includes padding in width */
+    /* box-sizing: border-box;  Includes padding in width */
   }
 }
 .dark-parallax-box {
