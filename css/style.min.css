@@ -121,6 +121,7 @@
 
 .section-separator {
   z-index: 1;
+  background-size: cover;
 }
 
 
