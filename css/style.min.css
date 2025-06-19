@@ -97,7 +97,7 @@
 
 .editor-section {
   background-image: url("../img/bgtry1.png");
-  background-size: 102%;
+  background-size: 101% auto;
   background-position: center;
   background-repeat: no-repeat;
 
