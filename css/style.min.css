@@ -120,7 +120,8 @@
 
 
 .section-separator {
-  background: url('../img/born/Clouds.png') center center no-repeat;
+  /*background: url('../img/born/Clouds.png') center center no-repeat;*/
+  background-color: #333;
   background-size: cover;
   height: 100px; /* Adjust height as needed */
   width: 100%;
