@@ -610,23 +610,17 @@ h6 {
 }
 
 @media (max-width: 768px) {
- .dark__text {
-  font-family: "Berlin";
-  font-weight: 700;
-  font-size: 1vw; /* Responsive font */
-  line-height: 1.3;
-  color: #050202;
-  word-wrap: break-word;
-  max-width: 100%;
+  .dark-parallax-box__item--6 {
+    transform: scale(0.5);
+    transform-origin: top center;
+  }
+
+  .dark__text {
+    font-size: 10px;
+  }
 }
 
-    .dark-parallax-box__item--6 {
-  width: 90vw;
-  margin: 0 auto;
-  padding: 1vw;
-  box-sizing: border-box;
-}
-}
+
 .dark-parallax-box {
   pointer-events: none;
   -webkit-user-select: none;
