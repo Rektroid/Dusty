@@ -129,7 +129,7 @@
 
 
 
-".section-separator {
+.section-separator {
   position: relative;
   height: 50px;
   z-index: 10;
@@ -146,7 +146,7 @@
   transform: translateY(25px); /* small overlap to cover border */
   z-index: 10;
   pointer-events: none;
-}" 
+}
 
 
 
