@@ -49,7 +49,7 @@ window.onload = function () {
   });
 
   // Load sticker (SVG) and add to canvas
-  fabric.Image.fromURL('img/try1.png', function(stickerImg) {
+  fabric.Image.fromURL('img/bottle.png', function(stickerImg) {
     stickerImg.scale(0.15);
     stickerImg.set({
       left: 100,
