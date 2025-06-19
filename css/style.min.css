@@ -119,7 +119,12 @@
 }
 
 
-
+.section-separator {
+  background: url('../img/born/Clouds.png') center center no-repeat;
+  background-size: cover;
+  height: 100px; /* Adjust height as needed */
+  width: 100%;
+}
 
 
 
