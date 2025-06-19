@@ -12,6 +12,19 @@
   font-weight: normal;
   font-style: normal;
 }
+.tokenomics-blur-bg {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+  backdrop-filter: blur(6px);           /* blur for frosted glass */
+  -webkit-backdrop-filter: blur(6px);   /* for Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* soft white stroke */
+  z-index: 0;
+}
 
 .cloud-title {
   position: absolute;
