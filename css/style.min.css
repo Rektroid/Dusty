@@ -133,22 +133,21 @@
 .section-separator {
   position: relative;
   height: 80px;
-  z-index: 10;
   background-color: black;
+  z-index: 10;
+  overflow: hidden; /* ✅ Hides overflow from image */
 }
 
 .section-separator img {
   position: absolute;
-  top: -100%;
+  top: 0; /* ✅ Changed from -100% */
   left: 0;
   width: 100%;
-  height: auto;
-  max-height: 650px;
-  transform: translateY(15px); /* small overlap to cover border */
+  height: 100%; /* ✅ Ensure full fill */
+  object-fit: cover; /* ✅ Scale image without stretching */
   z-index: 10;
   pointer-events: none;
 }
-
 
 
 
