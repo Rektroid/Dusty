@@ -120,18 +120,20 @@
 
 
 .section-separator {
-  margin: 0;
-  padding: 0;
-  line-height: 0; /* Avoids any whitespace caused by image line-height */
+  position: relative;
+  height: 0;
+  z-index: 10;
 }
 
 .section-separator img {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: auto;
-  max-height: 400px; /* Or whatever height looks good */
-  margin: 0;
-  padding: 0;
+  transform: translateY(-1px); /* small overlap to cover border */
+  z-index: 10;
+  pointer-events: none;
 }
 
 
