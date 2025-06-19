@@ -31,6 +31,7 @@
   max-width: 550px;
   width: 100%;
   margin-bottom: 50px;
+  margin-top: 100px;
   align-items: center; /* Centers horizontally */
   justify-content: center;/* Add this line */
   text-align: center;
