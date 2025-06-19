@@ -619,6 +619,16 @@ h6 {
     padding: 10px;
     max-width: 90%; /* Prevents stretching too far */
     /* box-sizing: border-box;  Includes padding in width */
+
+    .dark-parallax-box__item--6 {
+    background: url('../img/dark/text.png') center/contain no-repeat;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 1.5em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   }
 }
 .dark-parallax-box {
