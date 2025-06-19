@@ -41,12 +41,12 @@
 }
 
 .button-container {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column; /* Stack the buttons vertically */
-  justify-content: center; /* Center them vertically */
-  align-items: center; /* Center them horizontally */
-  gap: 15px;  /* Adds space between the buttons */
-  width: 100%; /* Ensures the container takes the full width of the parent */
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
 }
 
 /* Base styles for the buttons */
