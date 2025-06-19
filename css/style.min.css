@@ -610,26 +610,23 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  .dark__text {
-    font-size: 3px; /* Smaller font */
-    background-size: 70%; /* Ensure image scales with text */
-    background-repeat: no-repeat;
-    background-position: center;
-    line-height: 1.4;
-    padding: 10px;
-    max-width: 90%; /* Prevents stretching too far */
-    /* box-sizing: border-box;  Includes padding in width */
+ .dark__text {
+  font-family: "Berlin";
+  font-weight: 700;
+  font-size: 4vw; /* Responsive font */
+  line-height: 1.3;
+  color: #050202;
+  word-wrap: break-word;
+  max-width: 100%;
+}
 
     .dark-parallax-box__item--6 {
-    background: url('../img/dark/text.png') center/contain no-repeat;
-    width: 90vw;
-    margin: 0 auto;
-    padding: 1.5em;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  }
+  background: url('../img/dark/text.png') center/contain no-repeat;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 6vw;
+  box-sizing: border-box;
+}
 }
 .dark-parallax-box {
   pointer-events: none;
