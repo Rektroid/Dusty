@@ -129,7 +129,7 @@
   display: block;
   width: 100%;
   height: auto;
-  max-height: 150px; /* Or whatever height looks good */
+  max-height: 400px; /* Or whatever height looks good */
   margin: 0;
   padding: 0;
 }
