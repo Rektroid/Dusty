@@ -612,7 +612,7 @@ h6 {
 @media (max-width: 768px) {
   .dark-parallax-box__item--6 {
     transform: scale(0.5);
-    transform-origin: top center;
+    transform-origin: bottom center;
   }
 
   .dark__text {
