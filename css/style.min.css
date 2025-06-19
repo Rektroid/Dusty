@@ -129,24 +129,24 @@
 
 
 
-.section-separator {
+".section-separator {
   position: relative;
-  height: 80px;
-  background-color: black;
+  height: 50px;
   z-index: 10;
-  overflow: hidden; /* ✅ Hides overflow from image */
+  background-color: black;
 }
 
 .section-separator img {
   position: absolute;
-  top: 0; /* ✅ Changed from -100% */
+  top: -100%;
   left: 0;
   width: 100%;
-  height: 100%; /* ✅ Ensure full fill */
-  object-fit: cover; /* ✅ Scale image without stretching */
+  height: auto;
+  max-height: 500px;
+  transform: translateY(25px); /* small overlap to cover border */
   z-index: 10;
   pointer-events: none;
-}
+}" 
 
 
 
