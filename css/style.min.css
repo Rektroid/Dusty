@@ -611,10 +611,14 @@ h6 {
 
 @media (max-width: 768px) {
   .dark__text {
-    font-size: 5px; /* Adjust size as needed */
-    background-size: 90% auto; /* Scale background image smaller */
-    padding: 10px; /* Optional: Add space inside the box */
-    line-height: 120%;
+    font-size: 12px; /* Smaller font */
+    background-size: contain; /* Ensure image scales with text */
+    background-repeat: no-repeat;
+    background-position: center;
+    line-height: 1.4;
+    padding: 10px;
+    max-width: 90%; /* Prevents stretching too far */
+    box-sizing: border-box; /* Includes padding in width */
   }
 }
 .dark-parallax-box {
