@@ -49,8 +49,8 @@
 
 @media (max-width: 768px) {
   .editor-container {
-    transform: scale(0.7) translateY(70px);
-    transform-origin: bottom left;
+    transform: scale(0.7) translateY(-50px);
+    transform-origin: top center;
     margin-top: 5px;
   }
 }
