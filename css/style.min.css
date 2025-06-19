@@ -15,9 +15,9 @@
 
 .cloud-title {
   position: absolute;
-  top: 20%; /* Adjust for vertical placement */
+  top: 25%; /* Adjust for vertical placement */
   left: 50%;
-  transform: translateX(0px);
+  transform: translateX(-50%);
   z-index: 11;
   text-align: center;
 }
