@@ -608,6 +608,15 @@ h6 {
   letter-spacing: 0.03em;
   background: url(../img/dark/text.png) center/100% 100% no-repeat;
 }
+
+@media (max-width: 768px) {
+  .dark__text {
+    font-size: 14px; /* Adjust size as needed */
+    background-size: 90% auto; /* Scale background image smaller */
+    padding: 10px; /* Optional: Add space inside the box */
+    line-height: 120%;
+  }
+}
 .dark-parallax-box {
   pointer-events: none;
   -webkit-user-select: none;
