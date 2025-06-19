@@ -120,16 +120,7 @@
 
 
 .section-separator {
-  background: url("../img/born/Clouds.png") center center no-repeat;
-  background-size: cover;        /* ensures full coverage and scales responsively */
-  width: 100%;                   /* spans full width */
-  height: 150px;                 /* adjust as needed; scales on desktop */
-}
-
-@media (max-width: 767px) {
-  .section-separator {
-    height: 100px;              /* a bit shorter on mobile */
-  }
+  z-index: 1;
 }
 
 
