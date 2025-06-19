@@ -142,8 +142,8 @@
   left: 0;
   width: 100%;
   height: auto;
-  max-height: 500px;
-  transform: translateY(-30px); /* small overlap to cover border */
+  max-height: 600px;
+  transform: translateY(-50px); /* small overlap to cover border */
   z-index: 10;
   pointer-events: none;
 }
