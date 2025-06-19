@@ -127,11 +127,11 @@
 
 .section-separator img {
   position: absolute;
-  top: -100%;
+  top: -200%;
   left: 0;
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 800px;
   transform: translateY(-1px); /* small overlap to cover border */
   z-index: 10;
   pointer-events: none;
